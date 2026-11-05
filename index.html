@@ -1,101 +1,247 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en" translate="no" class="notranslate">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechNova | Laptops de Alto Rendimiento</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google" content="notranslate">
+    <meta name="description" content="Learn Java from the ground up: explore its history, variables, data types, methods, and beginner-friendly examples.">
+    <meta name="theme-color" content="#f8f4eb">
+    <title>Java for Beginners | From Code to Ideas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-<body>
+<body data-theme="light">
+    <a class="skip-link" href="#content">Skip to content</a>
 
-    <!-- Header / Navbar -->
-    <header class="navbar">
-        <a class="logo" href="#inicio">Tech<span>Nova</span></a>
-        <div class="nav-actions">
-            <nav aria-label="Navegación principal">
-                <a href="#inicio">Inicio</a>
-                <a href="#modelos">Modelos</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
-            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activar modo claro" title="Activar modo claro">
-                <span aria-hidden="true">☀</span>
-            </button>
-        </div>
+    <header class="site-header">
+        <a class="brand" href="#content" aria-label="Java for Beginners, home">
+            <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 32 32"><path d="M11 5c-2-2 2-3 0-5M18 5c-2-2 2-3 0-5M8 13h15v8a5 5 0 0 1-5 5h-5a5 5 0 0 1-5-5v-8Zm15 2h2a3 3 0 0 1 0 6h-3M11 29h14"/></svg>
+            </span>
+            <span>Java <span class="brand-light">for Beginners</span></span>
+        </a>
+        <nav class="desktop-nav" id="primary-nav" aria-label="Main navigation">
+            <a href="#what-is-java">Home</a>
+            <a href="#history">History</a>
+            <a href="#fundamentals">Fundamentals</a>
+            <a href="#methods">Methods</a>
+            <a href="#practice">Practice</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.4A8.4 8.4 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        </button>
     </header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <span class="eyebrow">Tecnología que impulsa tus ideas</span>
-            <h1>Potencia sin límites para tu <span>creatividad</span></h1>
-            <p>Descubre nuestra nueva generación de laptops diseñadas para desarrolladores, creadores y profesionales exigentes.</p>
-            <a class="btn-primary" href="#modelos">Explorar modelos <span aria-hidden="true">→</span></a>
-        </div>
-    </section>
+    <main id="content" class="home-main">
+        <header class="hero-intro">
+            <h1>Java: From Code to Ideas</h1>
+            <p>Discover what you can build with Java, learn the essentials, and try interactive examples.</p>
+        </header>
 
-    <!-- Modelos Grid -->
-    <section id="modelos" class="models-section">
-        <h2>Nuestros Modelos Destacados</h2>
-        <p class="section-intro">Encuentra el equipo perfecto para llevar tus proyectos más lejos.</p>
-        <div class="grid-container">
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=85" alt="Laptop NovaBook Pro abierta sobre un escritorio">
-                    <span class="product-tag">CREATIVIDAD</span>
-                </div>
-                <h3>NovaBook Pro 16</h3>
-                <p>Pantalla OLED 4K, procesador de última generación y 32GB de RAM.</p>
-                <div class="card-bottom"><span class="price">$1,299 <small>USD</small></span><span class="card-arrow" aria-hidden="true">↗</span></div>
+        <section class="hero-carousel" data-carousel aria-label="Java examples and use cases" aria-roledescription="carousel">
+            <div class="carousel-track" aria-live="polite">
+                <article class="carousel-slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 4">
+                    <img class="slide-image" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1800&q=85" alt="Person writing code on a laptop" fetchpriority="high">
+                    <div class="slide-shade">
+                        <div class="slide-copy">
+                            <span class="slide-kicker">One language. Countless possibilities.</span>
+                            <h2>What can you build with Java?</h2>
+                            <p>From mobile apps and video games to desktop tools and web services.</p>
+                            <a class="slide-link" href="#use-cases">Explore Java's uses <span aria-hidden="true">→</span></a>
+                        </div>
+                        <div class="java-wordmark" aria-label="Java">
+                            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 17c-5-4 9-5 3-12M27 16c-4-4 7-5 3-10M12 25h23v10a7 7 0 0 1-7 7h-9a7 7 0 0 1-7-7V25Zm23 3h4a5 5 0 0 1 0 10h-5M16 46h24"/></svg>
+                            <span>JAVA</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 of 4" hidden>
+                    <img class="slide-image" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1800&q=85" alt="A colorful gaming setup, representing video game development">
+                    <div class="slide-shade">
+                        <div class="slide-copy">
+                            <span class="slide-kicker">Desktop video games</span>
+                            <h2>Minecraft: Java Edition</h2>
+                            <p>A well-known edition of a PC game developed with Java.</p>
+                            <a class="slide-link" href="#use-cases">See more Java use cases <span aria-hidden="true">→</span></a>
+                        </div>
+                        <span class="slide-index" aria-hidden="true">01 / GAMES</span>
+                    </div>
+                </article>
+                <article class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 of 4" hidden>
+                    <img class="slide-image" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1800&q=85" alt="Source code on a screen, representing developer tools">
+                    <div class="slide-shade">
+                        <div class="slide-copy">
+                            <span class="slide-kicker">Software for building software</span>
+                            <h2>Eclipse IDE</h2>
+                            <p>An extensible development environment built primarily on the Java platform.</p>
+                            <a class="slide-link" href="#use-cases">Discover other uses <span aria-hidden="true">→</span></a>
+                        </div>
+                        <span class="slide-index" aria-hidden="true">02 / DESKTOP</span>
+                    </div>
+                </article>
+                <article class="carousel-slide" role="group" aria-roledescription="slide" aria-label="4 of 4" hidden>
+                    <img class="slide-image" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1800&q=85" alt="Servers in a data center, illustrating services built with Java">
+                    <div class="slide-shade">
+                        <div class="slide-copy">
+                            <span class="slide-kicker">Mobile and web services</span>
+                            <h2>From apps to online services</h2>
+                            <p>Java powers Android apps and web services, while Kotlin is also widely used for Android development.</p>
+                            <a class="slide-link" href="#use-cases">Explore the possibilities <span aria-hidden="true">→</span></a>
+                        </div>
+                        <span class="slide-index" aria-hidden="true">03 / APPLICATIONS</span>
+                    </div>
+                </article>
             </div>
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=85" alt="Laptop NovaAir ligera y portátil">
-                    <span class="product-tag">LIGEREZA</span>
+            <div class="carousel-controls">
+                <span class="carousel-count" aria-hidden="true"><span data-slide-current>01</span> <span class="count-divider">/</span> 04</span>
+                <div class="carousel-pagination" aria-label="Choose a slide">
+                    <button class="carousel-dot is-active" type="button" aria-label="Show slide 1" aria-current="true"></button>
+                    <button class="carousel-dot" type="button" aria-label="Show slide 2"></button>
+                    <button class="carousel-dot" type="button" aria-label="Show slide 3"></button>
+                    <button class="carousel-dot" type="button" aria-label="Show slide 4"></button>
                 </div>
-                <h3>NovaAir 14</h3>
-                <p>Ultra ligera, batería de larga duración ideal para estudiantes y viajes.</p>
-                <div class="card-bottom"><span class="price">$899 <small>USD</small></span><span class="card-arrow" aria-hidden="true">↗</span></div>
-            </div>
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=900&q=85" alt="Laptop NovaXtreme Gaming de alto rendimiento">
-                    <span class="product-tag">GAMING</span>
+                <div class="carousel-arrows">
+                    <button class="carousel-arrow" type="button" data-slide-previous aria-label="Show previous slide">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                    <button class="carousel-arrow" type="button" data-slide-next aria-label="Show next slide">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
                 </div>
-                <h3>NovaXtreme Gaming</h3>
-                <p>Gráficos dedicados de alto nivel y sistema de enfriamiento avanzado.</p>
-                <div class="card-bottom"><span class="price">$1,599 <small>USD</small></span><span class="card-arrow" aria-hidden="true">↗</span></div>
+                <button class="carousel-autoplay" type="button" data-carousel-toggle aria-label="Pause automatic slide rotation" aria-pressed="true">
+                    <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14m8-14v14"/></svg>
+                    <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 12 7-12 7V5Z"/></svg>
+                </button>
             </div>
-        </div>
-    </section>
+            <p class="visual-note">Illustrative Unsplash photos; these are not official screenshots of the applications mentioned.</p>
+        </section>
 
-    <!-- Footer -->
-    <footer id="contacto" class="footer">
-        <p>&copy; 2026 TechNova. Creado como prototipo para Render.</p>
+        <article class="lesson" id="home">
+            <section id="what-is-java" aria-labelledby="what-is-java-title">
+                <h2 id="what-is-java-title">What is Java?</h2>
+                <p>Java is a general-purpose programming language. Java code is compiled and can run on different systems through the Java Virtual Machine, known as the <abbr title="Java Virtual Machine">JVM</abbr>.</p>
+                <p>Explore short examples and an interactive exercise. No prior experience is needed: start by learning how data is stored and used.</p>
+            </section>
+
+            <section id="history" aria-labelledby="history-title">
+                <h2 id="history-title">A brief history</h2>
+                <p>Java was developed at Sun Microsystems and introduced to the public in 1995. Oracle acquired Sun Microsystems in 2010. Since then, Java has continued to evolve with contributions from Oracle and the community behind OpenJDK.</p>
+            </section>
+
+            <section id="use-cases" aria-labelledby="use-cases-title">
+                <h2 id="use-cases-title">Where can you use Java?</h2>
+                <ul class="concept-list">
+                    <li><strong>Android apps:</strong> Java supports Android development alongside Kotlin and other tools in the ecosystem.</li>
+                    <li><strong>Video games:</strong> Minecraft: Java Edition is a well-known example of a PC game developed with Java.</li>
+                    <li><strong>Desktop tools:</strong> Eclipse IDE and other tools use extensible platforms built primarily with Java.</li>
+                    <li><strong>Web services:</strong> Build APIs and backend systems with Java and tools such as Spring.</li>
+                </ul>
+            </section>
+
+            <section aria-labelledby="features-title">
+                <h2 id="features-title">What makes Java distinctive?</h2>
+                <ul class="concept-list">
+                    <li><strong>Cross-platform:</strong> the same program can run on systems with a compatible JVM.</li>
+                    <li><strong>Statically typed:</strong> when declaring a variable, you specify the type of data it will hold.</li>
+                    <li><strong>Object-oriented:</strong> the language lets you organize programs into classes and objects.</li>
+                </ul>
+            </section>
+
+            <section id="fundamentals" aria-labelledby="fundamentals-title">
+                <h2 id="fundamentals-title">Variables and data types</h2>
+                <p>A variable is a name associated with a value. In Java, a declaration includes the type, the name, and optionally an initial value.</p>
+
+                <div class="code-example">
+                    <div class="code-heading">
+                        <span>Variables in Java</span>
+                        <button class="copy-button" type="button" data-copy-target="variables-code">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+                            <span class="copy-label">Copy code</span>
+                        </button>
+                    </div>
+                    <pre><code id="variables-code">String name = "Lina";
+int age = 18;
+boolean studiesJava = true;
+
+System.out.println("Hello, " + name);</code></pre>
+                    <p class="copy-feedback" aria-live="polite"></p>
+                </div>
+
+                <p>The type indicates what kind of data a variable holds. Here are some common types:</p>
+                <div class="table-wrap" tabindex="0" aria-label="Basic data types table">
+                    <table>
+                        <thead>
+                            <tr><th scope="col">Type</th><th scope="col">Stores</th><th scope="col">Example</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row"><code>int</code></th><td>Whole numbers</td><td><code>int age = 18;</code></td></tr>
+                            <tr><th scope="row"><code>double</code></th><td>Decimal numbers</td><td><code>double price = 4.5;</code></td></tr>
+                            <tr><th scope="row"><code>boolean</code></th><td>True or false</td><td><code>boolean active = true;</code></td></tr>
+                            <tr><th scope="row"><code>String</code></th><td>Text</td><td><code>String city = "Lima";</code></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="methods" aria-labelledby="methods-title">
+                <h2 id="methods-title">Methods: named actions</h2>
+                <p>A method groups instructions to perform a task. In Java, methods are declared inside a class and run when the program calls them; they are not written as standalone functions outside a class.</p>
+
+                <div class="code-example">
+                    <div class="code-heading">
+                        <span>A method that says hello</span>
+                        <button class="copy-button" type="button" data-copy-target="method-code">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
+                            <span class="copy-label">Copy code</span>
+                        </button>
+                    </div>
+                    <pre><code id="method-code">public class Greeting {
+    public static void main(String[] args) {
+        greet("Lina");
+    }
+
+    static void greet(String name) {
+        System.out.println("Hello, " + name);
+    }
+}</code></pre>
+                    <p class="copy-feedback" aria-live="polite"></p>
+                </div>
+            </section>
+
+            <section id="practice" aria-labelledby="practice-title">
+                <h2 id="practice-title">Try it yourself</h2>
+                <p>Change the values and see what happens. This browser demo shows output similar to the example; it does not compile or run Java.</p>
+                <form class="demo-form" id="demo-form" novalidate>
+                    <div class="field">
+                        <label for="demo-name">Name</label>
+                        <input id="demo-name" name="name" type="text" value="Lina" autocomplete="given-name" required>
+                    </div>
+                    <div class="field">
+                        <label for="demo-age">Age</label>
+                        <input id="demo-age" name="age" type="number" min="0" step="1" value="18" inputmode="numeric" required>
+                    </div>
+                    <button class="action-button" type="submit">Run the example</button>
+                </form>
+                <p class="demo-message" id="demo-message" role="status" aria-live="polite">Update the values and run the example to see the output.</p>
+                <output class="demo-output" id="demo-output" aria-live="polite">Hello, Lina. You are 18 years old.</output>
+            </section>
+        </article>
+    </main>
+
+    <nav class="mobile-nav" aria-label="Guide sections">
+        <a href="#what-is-java">Home</a>
+        <a href="#use-cases">Use cases</a>
+        <a href="#fundamentals">Fundamentals</a>
+        <a href="#methods">Methods</a>
+        <a href="#practice">Practice</a>
+    </nav>
+
+    <footer class="site-footer">
+        <p>An introductory guide to Java. Page interactions are powered by JavaScript.</p>
     </footer>
-
-    <script>
-        const themeToggle = document.querySelector('#theme-toggle');
-        const savedTheme = localStorage.getItem('technova-theme');
-
-        if (savedTheme === 'light' || savedTheme === 'dark') {
-            document.body.dataset.theme = savedTheme;
-        }
-
-        function updateThemeButton() {
-            const isLight = document.body.dataset.theme === 'light';
-            themeToggle.setAttribute('aria-label', `Activar modo ${isLight ? 'oscuro' : 'claro'}`);
-            themeToggle.title = `Activar modo ${isLight ? 'oscuro' : 'claro'}`;
-            themeToggle.querySelector('span').textContent = isLight ? '☾' : '☀';
-        }
-
-        updateThemeButton();
-
-        themeToggle.addEventListener('click', () => {
-            const nextTheme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
-            document.body.dataset.theme = nextTheme;
-            localStorage.setItem('technova-theme', nextTheme);
-            updateThemeButton();
-        });
-    </script>
 </body>
 </html>
