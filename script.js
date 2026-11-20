@@ -238,7 +238,10 @@ demoForm.addEventListener("submit", (event) => {
 const navigationLinks = [...document.querySelectorAll(".desktop-nav a, .mobile-nav a")];
 const navigationSections = [...new Set(navigationLinks
     .map((link) => document.querySelector(link.getAttribute("href")))
-    .filter(Boolean))];
+    .filter(Boolean))]
+    .sort((first, second) => (
+        first.compareDocumentPosition(second) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1
+    ));
 
 function updateCurrentSection() {
     const readingLine = Math.min(240, window.innerHeight * 0.3);
@@ -258,3 +261,54 @@ function updateCurrentSection() {
 window.addEventListener("scroll", updateCurrentSection, { passive: true });
 window.addEventListener("resize", updateCurrentSection);
 updateCurrentSection();
+
+const siteHeader = document.querySelector(".site-header");
+
+if (siteHeader) {
+    const updateHeaderState = () => {
+        siteHeader.classList.toggle("is-scrolled", window.scrollY > 8);
+    };
+
+    window.addEventListener("scroll", updateHeaderState, { passive: true });
+    updateHeaderState();
+}
+
+const lessonSections = [...document.querySelectorAll(".lesson section")];
+
+if (lessonSections.length > 0) {
+    const revealItems = [];
+
+    lessonSections.forEach((section) => {
+        [...section.children].forEach((child, index) => {
+            const isList = child.matches(".concept-list");
+            const targets = isList ? [...child.children] : [child];
+
+            targets.forEach((target, targetIndex) => {
+                const delay = Math.min((isList ? targetIndex : index) * 65, 260);
+                target.classList.add("reveal");
+                target.style.setProperty("--reveal-delay", `${delay}ms`);
+                revealItems.push(target);
+            });
+        });
+    });
+
+    const revealMotionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    if ("IntersectionObserver" in window && !revealMotionPreference.matches) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            rootMargin: "0px 0px -8% 0px",
+            threshold: 0.1
+        });
+
+        revealItems.forEach((item) => revealObserver.observe(item));
+    } else {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
+    }
+}
